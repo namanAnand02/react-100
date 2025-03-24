@@ -46,7 +46,7 @@ also, this DOM thingy can be unreadable to many and can seem complex to many, wh
 - STATE  COMPONENTS  RENDERING 
 
 
-- ~~~~~~~~~~~~~~~ STATE ~~~~~~~~~~~~~~~~~~~~
+- ## STATE 
 
 -- an object (js object) that represents the current state of the application.
 -- it represents the dynamic things in our application ( things that change ), for example: the value of the counter
@@ -75,12 +75,12 @@ also, this DOM thingy can be unreadable to many and can seem complex to many, wh
         }
 
 -- why are we breaking our applications into state and components? 
---- the way react is written, if we change state lets say notifications to 2, it will automatically change that in our application 
---- this is good for developer as it would be hard for me to change it using DOM, find the notifications section, then change it etc etc 
+--> the way react is written, if we change state lets say notifications to 2, it will automatically change that in our application 
+--> this is good for developer as it would be hard for me to change it using DOM, find the notifications section, then change it etc etc 
 
---- state.topbar.notifications = 3 , just this much in react to do the changes. This way,, frontend would be so clean, and easy. 
---- whenever the btn is pressed, just update the state and it will automatically show the change over there.
---- in that counter app, just do state.count++ on every btn click.
+--> state.topbar.notifications = 3 , just this much in react to do the changes. This way,, frontend would be so clean, and easy. 
+--> whenever the btn is pressed, just update the state and it will automatically show the change over there.
+--> in that counter app, just do state.count++ on every btn click.
 
 -- understand now why state was introduced? 
 -- so that all js logics, like counter increase on btn click etc only happen in the state logic. - How that happen, uske liye we need component, something we'll learn very soon. 
@@ -88,7 +88,7 @@ also, this DOM thingy can be unreadable to many and can seem complex to many, wh
 
 
 
-- ~~~~~~~~~~~ COMPONENT ~~~~~~~~~~~~~~~~~~~~~ 
+- ## COMPONENT  
 
 
 -- we still need to write some html, otherwise how'd it know kahan hai notifications bar etc 
@@ -120,9 +120,9 @@ also, this DOM thingy can be unreadable to many and can seem complex to many, wh
 - In linkedin topbar example: 
 -- HOME <> my Network <> Jobs <> messaging <> Notifications 
 
---- these are components and they take state as input and renders them on the screen. 
+--> these are components and they take state as input and renders them on the screen. 
 
--- notifications, my Network, etc all these are components and they take notifications count, my Network count (state) as input and renders them on the screen. 
+--> notifications, my Network, etc all these are components and they take notifications count, my Network count (state) as input and renders them on the screen. 
 
 - Therefore STATE + COMPONENT = REACT website 
 
