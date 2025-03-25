@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Developed a similar-to-REACT-thingy</h2>
+    <div id="buttonParent"></div>
+    <script>
+      // defined STATE variable (object)
+      let state = {
+        count: 0,
+      };
+
+      // function onButtonPress - when the button gets pressed, what happens!
+      // Function executed when the button is pressed
+      function onButtonPress() {
+        // we didnt have to write a lot of DOM manipulation here, just that we changing state count here.
+        state.count++; // update state
+        buttonComponentReRender(); // button Component re-render logic is written in this function which e simply call having made any change to state.
+        // here, we are explicitly calling this component re-rrendering function, when we use React, we wont need to do this, react handles it for us.
+        // re-render = taking the state and putting it on the screen
+      }
+
+      // the below function contains all the logic how re-rendering should happen after state change in button value
+      // this is exactly what react automatically does for us - we are defining that ourselves here
+      // Re-render function
+      function buttonComponentReRender() {
+        document.getElementById("buttonParent").innerHTML = ""; // clear old button
+        const component = buttonComponent(state.count); // generate new button
+        document.getElementById("buttonParent").appendChild(component); // append to DOM
+      }
+
+      // defined COMPONENT
+      // functon through which we are generating button component
+      function buttonComponent(count) {
+        const button = document.createElement("button");
+        button.innerHTML = `Counter ${count}`;
+        button.setAttribute("onclick", `onButtonPress()`);
+        buton.addEventListener("click", onButtonPress); // eventListener is better to be used.
+        return button;
+      }
+
+      // the above function returns us a HTML tag
+      // <button onclick= "onButtonPress">Counter 0 (0 wala part is dynamic here- count argument that is fed) </button>
+
+      // so this generates a component : how a DOM element should render, given a state.
+      // react component is very similar - it takes a dynamic variable as input and returns us the HTML tags mostly.
+
+      // Initial render
+      buttonComponentReRender();
+    </script>
+  </body>
+</html>
+
+<!-- 
+
+
+The javascript is adding the button here on the webpage. 
+Button is not defined in HTML. 
+Javascript has the code base which brings the button on the page. 
+
+
+In here, we had to define the render logic and also call it explicitly every time we update the state. 
+But when we be using REACT, we wont need to do that. 
+REACT will automatically detect the change in state and will ask the component to re render to show the change in the screen. 
+
+In REACT, we just have to first define the state variable, then we need to define the component - -  we also will have to define the logic when does our state gets changed, like onButtonPress, change our state count by 1 
+React under the hood will make sure that the state change gets updated on the screen.
+
+
+
+
+
+-->

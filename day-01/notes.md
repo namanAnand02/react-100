@@ -142,8 +142,16 @@ also, this DOM thingy can be unreadable to many and can seem complex to many, wh
 
 
 
+- React/ Vue.js are frameworks that asks us for two things: 
+1. Create a bunch of components 
+2. create a bunch of state objects 
+Tell them which state objects is associated with which component 
+and They will take care of the re- rendering, we dont need to worry about DOM manipulation, react will do that for us through re-rendering. 
+We as a developer only worry about changing the state.
 
 
-
+- define the components once ( people use material UI, etc)
+- then all we have to do is to update the state.
+- as we update our state, the website will get updated automatically, thats through react. 
 
 
