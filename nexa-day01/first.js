@@ -195,3 +195,11 @@ const li3 = React.createElement("h1", {}, "JS")
 const unorderedList = React.createElement("ul",{fontSize:"10px", color:"red", backgroundColor:"pink"}, [li1,li2,li3] )
 // React accepts text as single, so we sent all three as an array - we'll extract them using loops 
 ReactDOM.render(unorderedList, document.getElementById("root"))
+
+
+
+// conclusion - just so we dont need to do these things ourselves, some super minded developers at facebook did the hardwork of our part 
+// they created React - a js library 
+// now, we can just import it and use its functionalities without worrying about what's happening under the hood 
+
+// facebook, netflix, insta etc all of them use react today 
