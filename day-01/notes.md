@@ -37,11 +37,14 @@ also, this DOM thingy can be unreadable to many and can seem complex to many, wh
 -- people have made state management libraries and components, people have also created design managements, UI componets etc 
 -- basically, there are two very imp jargons in react and they are STATE and COMPONENTS 
 
--- for a static websites, all we need is a components but for a dynamic websites, we need state and components 
+> for a static websites, all we need is a components but for a dynamic websites, we need state and components.
+
 -- creators of frontend frameworks realised that all websites can effectively be divided into two parts : STATE and COMPONENTS 
 
 -- if we can define our dynamic websites into state and components, it'll give us an amazing developer experience. 
 -- if anyone wants to create an application, first they will create state and components and doing that will ease their work. 
+
+
 
 - STATE  COMPONENTS  RENDERING 
 
@@ -154,4 +157,7 @@ We as a developer only worry about changing the state.
 - then all we have to do is to update the state.
 - as we update our state, the website will get updated automatically, thats through react. 
 
+
+
+- component is like the box and state is like color and number that changes
 
