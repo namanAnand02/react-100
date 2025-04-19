@@ -279,3 +279,9 @@ Reactroot.render(div1)
 
 // locked exact version of the dependencies thaat we have used, lies in package.lock.json.
 
+// if there is no node_modules --> all we need to do is npm install in the command line 
+
+// it will go to packaage.lock.json and bring back all the important dependencies, etc to our code base. If say, package.lock.json is also not there, it will go to package.json and check for dependencies- and bring them, but this time they might not be able to bring exact versions of dependencies- whatever the current vrsion(including the minor fix or patch), it brings that along.
+
+
+
